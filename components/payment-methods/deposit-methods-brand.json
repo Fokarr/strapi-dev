@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_payment_methods_deposit_methods_brands",
+  "info": {
+    "name": "Deposit_Methods_Brand",
+    "icon": "coins"
+  },
+  "options": {},
+  "attributes": {
+    "Minimum": {
+      "type": "integer",
+      "required": false
+    },
+    "Maximum": {
+      "type": "integer"
+    },
+    "payments": {
+      "collection": "payments"
+    },
+    "currencies": {
+      "collection": "currencies"
+    }
+  }
+}

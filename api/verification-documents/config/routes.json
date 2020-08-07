@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/verification-documents",
+      "handler": "verification-documents.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/verification-documents/count",
+      "handler": "verification-documents.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/verification-documents/:id",
+      "handler": "verification-documents.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/verification-documents",
+      "handler": "verification-documents.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/verification-documents/:id",
+      "handler": "verification-documents.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/verification-documents/:id",
+      "handler": "verification-documents.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

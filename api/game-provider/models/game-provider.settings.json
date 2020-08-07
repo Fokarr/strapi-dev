@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "game_providers",
+  "info": {
+    "name": "Game Provider"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Provider_Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "brands": {
+      "via": "game_providers",
+      "collection": "casinos",
+      "dominant": true
+    }
+  }
+}

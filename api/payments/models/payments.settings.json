@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payments",
+  "info": {
+    "name": "Payments"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Payment_Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Payment_Type": {
+      "type": "enumeration",
+      "enum": [
+        "Bank_Transfer",
+        "Credit_Card",
+        "Cryptocurrency",
+        "Debit_Card",
+        "E_Wallet",
+        "Instant_Play",
+        "Mobile_Payment",
+        "Other",
+        "Prepaid_Card"
+      ],
+      "required": true
+    },
+    "brands": {
+      "via": "payment_methods",
+      "collection": "casinos",
+      "dominant": true
+    }
+  }
+}

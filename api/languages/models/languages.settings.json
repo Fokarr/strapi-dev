@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "languages",
+  "info": {
+    "name": "Languages"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Language_Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "casinos": {
+      "via": "languages",
+      "collection": "casinos",
+      "dominant": true
+    },
+    "countries": {
+      "via": "languages",
+      "collection": "countries"
+    },
+    "ISO_Shortcode": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

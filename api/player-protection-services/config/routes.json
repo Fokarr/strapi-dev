@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/player-protection-services",
+      "handler": "player-protection-services.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/player-protection-services/count",
+      "handler": "player-protection-services.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/player-protection-services/:id",
+      "handler": "player-protection-services.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/player-protection-services",
+      "handler": "player-protection-services.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/player-protection-services/:id",
+      "handler": "player-protection-services.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/player-protection-services/:id",
+      "handler": "player-protection-services.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

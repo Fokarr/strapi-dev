@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/gaming-licences",
+      "handler": "gaming-licences.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/gaming-licences/count",
+      "handler": "gaming-licences.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/gaming-licences/:id",
+      "handler": "gaming-licences.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/gaming-licences",
+      "handler": "gaming-licences.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/gaming-licences/:id",
+      "handler": "gaming-licences.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/gaming-licences/:id",
+      "handler": "gaming-licences.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

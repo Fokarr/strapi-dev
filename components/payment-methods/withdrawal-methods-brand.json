@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_payment_methods_withdrawal_methods_brands",
+  "info": {
+    "name": "Withdrawal_Methods_Brand",
+    "icon": "donate"
+  },
+  "options": {},
+  "attributes": {
+    "Minimum": {
+      "type": "integer"
+    },
+    "Maximum": {
+      "type": "integer"
+    },
+    "payments": {
+      "collection": "payments"
+    },
+    "currencies": {
+      "collection": "currencies"
+    }
+  }
+}

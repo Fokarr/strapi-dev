@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "verification_documents",
+  "info": {
+    "name": "Verification Documents"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Document_Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "brands": {
+      "via": "verification_documents",
+      "collection": "casinos",
+      "dominant": true
+    }
+  }
+}

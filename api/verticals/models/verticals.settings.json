@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "verticals",
+  "info": {
+    "name": "Verticals"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Vertical_Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "casinos": {
+      "via": "verticals",
+      "collection": "casinos",
+      "dominant": true
+    }
+  }
+}

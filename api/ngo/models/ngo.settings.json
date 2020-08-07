@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ngos",
+  "info": {
+    "name": "NGO"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "NGO_Name": {
+      "type": "string"
+    },
+    "casinos": {
+      "via": "player_protection_ngos",
+      "collection": "casinos",
+      "dominant": true
+    }
+  }
+}

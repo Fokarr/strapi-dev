@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "currencies",
+  "info": {
+    "name": "Currencies"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Currency_Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "casinos": {
+      "via": "currencies",
+      "collection": "casinos",
+      "dominant": true
+    },
+    "Symbol": {
+      "type": "string",
+      "required": true
+    },
+    "Position_Symbol": {
+      "type": "enumeration",
+      "enum": [
+        "before",
+        "after"
+      ],
+      "required": true
+    },
+    "ISO_Shortcode": {
+      "type": "string",
+      "required": true
+    },
+    "countries": {
+      "via": "currencies",
+      "collection": "countries",
+      "dominant": true
+    }
+  }
+}

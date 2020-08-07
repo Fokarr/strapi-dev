@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "countries",
+  "info": {
+    "name": "Countries"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Country_Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "ISO": {
+      "type": "string",
+      "required": true
+    },
+    "languages": {
+      "collection": "languages",
+      "via": "countries",
+      "dominant": true
+    },
+    "currencies": {
+      "collection": "currencies",
+      "via": "countries"
+    },
+    "brands": {
+      "via": "restricted_countries",
+      "collection": "casinos",
+      "dominant": true
+    }
+  }
+}

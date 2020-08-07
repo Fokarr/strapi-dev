@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "player_protection_services",
+  "info": {
+    "name": "Player Protection Services"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Service_Name": {
+      "type": "string"
+    },
+    "casinos": {
+      "via": "player_protection_services",
+      "collection": "casinos",
+      "dominant": true
+    }
+  }
+}

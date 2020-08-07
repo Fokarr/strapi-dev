@@ -1,0 +1,228 @@
+{
+  "kind": "collectionType",
+  "collectionName": "casinos",
+  "info": {
+    "name": "Brands"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Brand_Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Slug": {
+      "type": "string",
+      "required": false
+    },
+    "Brand_Status": {
+      "type": "enumeration",
+      "enum": [
+        "Live",
+        "Pre_Launch",
+        "Closed"
+      ],
+      "required": true
+    },
+    "Homepage_URL": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "Launch_Date": {
+      "type": "date",
+      "required": true
+    },
+    "Internal_Status": {
+      "type": "enumeration",
+      "enum": [
+        "Active",
+        "No_Relevance"
+      ],
+      "required": true
+    },
+    "verticals": {
+      "collection": "verticals",
+      "via": "casinos"
+    },
+    "player_protection_ngos": {
+      "collection": "ngo",
+      "via": "casinos"
+    },
+    "player_protection_services": {
+      "collection": "player-protection-services",
+      "via": "casinos"
+    },
+    "gaming_licences": {
+      "collection": "gaming-licences",
+      "via": "casinos"
+    },
+    "languages": {
+      "collection": "languages",
+      "via": "casinos"
+    },
+    "currencies": {
+      "collection": "currencies",
+      "via": "casinos"
+    },
+    "Security": {
+      "type": "enumeration",
+      "enum": [
+        "SSL128",
+        "SSL256"
+      ],
+      "required": false
+    },
+    "associations": {
+      "collection": "associations",
+      "via": "brands"
+    },
+    "Deposit_Methods": {
+      "type": "component",
+      "repeatable": true,
+      "component": "payment-methods.deposit-methods-brand"
+    },
+    "Withdrawal_Methods": {
+      "type": "component",
+      "repeatable": true,
+      "component": "payment-methods.withdrawal-methods-brand"
+    },
+    "payment_methods": {
+      "collection": "payments",
+      "via": "brands"
+    },
+    "verification_documents": {
+      "collection": "verification-documents",
+      "via": "brands"
+    },
+    "Customer_Support_Mail": {
+      "type": "string"
+    },
+    "Customer_Support_Phone": {
+      "type": "string"
+    },
+    "Live_Chat": {
+      "type": "boolean"
+    },
+    "Chat_Availability": {
+      "type": "enumeration",
+      "enum": [
+        "everytime",
+        "working_days"
+      ]
+    },
+    "Affiliate_Program_Status": {
+      "type": "enumeration",
+      "enum": [
+        "Live",
+        "Not_Started",
+        "Closed"
+      ],
+      "private": true
+    },
+    "Affiliate_Program_Link": {
+      "type": "string",
+      "private": true
+    },
+    "Affiliate_Application_Status": {
+      "type": "enumeration",
+      "enum": [
+        "Not_applied",
+        "Awaited",
+        "Accepted",
+        "Denied",
+        "No_Affiliate_Program"
+      ]
+    },
+    "Tracker_Link": {
+      "type": "string"
+    },
+    "Deal_Type": {
+      "type": "enumeration",
+      "enum": [
+        "CPA",
+        "CPA_REV",
+        "Fix_CPA",
+        "Fix_CPA_REV",
+        "Fix_REV",
+        "Rev_Share"
+      ]
+    },
+    "Logo_500_500": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "game_providers": {
+      "collection": "game-provider",
+      "via": "brands"
+    },
+    "restricted_countries": {
+      "collection": "countries",
+      "via": "brands"
+    },
+    "Brand_Rating": {
+      "type": "enumeration",
+      "enum": [
+        "AAA",
+        "AA",
+        "A",
+        "BB",
+        "B",
+        "C",
+        "D"
+      ],
+      "private": true
+    },
+    "Games_Count": {
+      "type": "integer"
+    },
+    "Rating": {
+      "type": "decimal",
+      "required": true,
+      "min": 1,
+      "max": 10
+    },
+    "Screenshot_Desktop_1280x720": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "Screenshot_Mobile_405x720": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "Min_Deposit_Value": {
+      "type": "string"
+    },
+    "Max_Deposit_Value": {
+      "type": "string"
+    },
+    "Min_Withdrawal_Value": {
+      "type": "string"
+    },
+    "Max_Withdrawal_Value": {
+      "type": "string"
+    },
+    "Review_Text": {
+      "type": "richtext",
+      "required": false
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gaming_licences",
+  "info": {
+    "name": "Gaming Licences"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "License_Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "casinos": {
+      "via": "gaming_licences",
+      "collection": "casinos",
+      "dominant": true
+    }
+  }
+}

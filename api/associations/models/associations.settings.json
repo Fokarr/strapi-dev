@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "associations",
+  "info": {
+    "name": "Associations"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Association_Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "brands": {
+      "via": "associations",
+      "collection": "casinos",
+      "dominant": true
+    }
+  }
+}
